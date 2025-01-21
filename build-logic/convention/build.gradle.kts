@@ -51,5 +51,10 @@ gradlePlugin {
             id = "baseproject.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
+
+        register("androidLibraryCompose") {
+            id = "baseproject.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
     }
 }

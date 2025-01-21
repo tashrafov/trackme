@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.baseproject.android.application)
     alias(libs.plugins.baseproject.android.application.compose)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.hilt)
+    alias(libs.plugins.jetbrains.kotlin.kapt)
 }
 
 android {
@@ -24,19 +26,14 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
     buildFeatures {
         compose = true
     }
 }
 
 dependencies {
+    implementation(projects.feature.login)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -53,4 +50,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hilt.compiler)
 }

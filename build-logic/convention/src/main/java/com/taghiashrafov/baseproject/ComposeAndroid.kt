@@ -18,7 +18,17 @@ internal fun Project.configureAndroidCompose(
 
     dependencies {
         val bom = libs.findLibrary("androidx-compose-bom").get()
+        val compose = libs.findLibrary("androidx-activity-compose").get()
+        val androidXUI = libs.findLibrary("androidx-ui").get()
+        val androidXUIGraphics = libs.findLibrary("androidx-ui-graphics").get()
+        val androidXUIToolingPreview = libs.findLibrary("androidx-ui-tooling-preview").get()
+        val androidXMaterial3 = libs.findLibrary("androidx-material3").get()
+        add("implementation", compose)
         add("implementation", platform(bom))
+        add("implementation", androidXUI)
+        add("implementation", androidXUIGraphics)
+        add("implementation", androidXUIToolingPreview)
+        add("implementation", androidXMaterial3)
         add("androidTestImplementation", platform(bom))
         add("coreLibraryDesugaring", libs.findLibrary("android-desugar").get())
     }

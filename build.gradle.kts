@@ -6,4 +6,5 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.jetbrains.kotlin.kapt) apply false
     alias(libs.plugins.kotlin.hilt) apply false
+    alias(libs.plugins.maps.secrets) apply false
 }

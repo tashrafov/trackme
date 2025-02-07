@@ -21,6 +21,7 @@ dependencies {
     compileOnly(libs.gradle)
     compileOnly(libs.kotlin.gradle.plugin)
     compileOnly(libs.compose.gradle.plugin)
+    compileOnly(libs.secrets.gradle.plugin)
 }
 
 tasks {

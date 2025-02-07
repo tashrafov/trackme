@@ -1,11 +1,15 @@
 [versions]
-hiltNavigationCompose = "1.2.0"
-lifecycleViewmodelCompose = "2.8.7"
 minSdk = "24"
 targetSdk = "35"
 compileSdk = "35"
 versionCode = "1"
 versionName = "1.0.0"
+accompanistPermissions = "0.36.0"
+hiltNavigationCompose = "1.2.0"
+lifecycleViewmodelCompose = "2.8.7"
+mapsCompose = "6.4.1"
+mapsComposeUtils = "6.4.1"
+mapsComposeWidgets = "6.4.1"
 agp = "8.6.1"
 gradle = "8.7.3"
 javapoet = "1.13.0"
@@ -17,7 +21,7 @@ espressoCore = "3.6.1"
 kotlinGradlePlugin = "2.0.0"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
-composeBom = "2025.01.00"
+composeBom = "2025.01.01"
 desugar = "2.1.4"
 appcompat = "1.7.0"
 material = "1.12.0"
@@ -26,13 +30,18 @@ retrofit = "2.11.0"
 okhttpLogging = "4.12.0"
 dagger = "2.52"
 dataStore = "1.1.2"
-uiTextGoogleFonts = "1.7.6"
-uiTooling = "1.7.6"
+uiTextGoogleFonts = "1.7.7"
+uiTooling = "1.7.7"
 daggerHilt = "2.52"
 androidXHiltLifecycle = "1.0.0-alpha03"
 androidXHiltCompiler = "1.2.0"
+playServicesMaps = "19.0.0"
+playServicesLocation = "21.3.0"
+runtimeAndroid = "1.7.7"
+secretsGradlePlugin = "2.0.1"
 
 [libraries]
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanistPermissions" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
@@ -54,6 +63,9 @@ android-desugar = { group = "com.android.tools", name = "desugar_jdk_libs", vers
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 compose-gradle-plugin = { group = "org.jetbrains.kotlin", name = "compose-compiler-gradle-plugin", version.ref = "kotlinGradlePlugin" }
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsCompose" }
+maps-compose-utils = { module = "com.google.maps.android:maps-compose-utils", version.ref = "mapsComposeUtils" }
+maps-compose-widgets = { module = "com.google.maps.android:maps-compose-widgets", version.ref = "mapsComposeWidgets" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
@@ -69,9 +81,13 @@ dagger-android-processor = { group = "com.google.dagger", name = "dagger-android
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
 google-gson = { group = "com.google.code.gson", name = "gson", version = "2.11.0" }
 androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
+secrets-gradle-plugin = { module = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin", version.ref = "secretsGradlePlugin" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }
 dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
 dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "daggerHilt" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+androidx-runtime-android = { group = "androidx.compose.runtime", name = "runtime-android", version.ref = "runtimeAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -79,6 +95,7 @@ jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotli
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+maps-secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsGradlePlugin" }
 
 # Plugins defined by this project
 baseproject-android-application = { id = "baseproject.android.application" }

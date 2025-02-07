@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_new_journey">Start new Journey</string>
+    <string name="show_previous_journeys">Show previous Journeys</string>
+    <string name="message_coarse_location_disabled_warning">Location Permission is required for app to function properly, you can go to the app settings to grant it</string>
+    <string name="message_coarse_location_default_warning">Location Permission is required for app to function properly</string>
+    <string name="title_permission_required">Permission Required</string>
+    <string name="title_info">Info</string>
+    <string name="title_grant_permission">Grant permission</string>
+    <string name="title_ok">Ok</string>
+</resources>

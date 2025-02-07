@@ -17,6 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.taghiashrafov.home.presentation.HomeScreen
 import com.taghiashrafov.login.presentation.LoginScreen
 import com.taghiashrafov.trackme.ui.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,7 +37,7 @@ class MainActivity : ComponentActivity() {
                     snackbarHost = { SnackbarHost(hostState = scaffoldState) },
                 ) { innerPadding ->
                     Box(modifier = Modifier.padding(innerPadding)) {
-                        LoginScreen()
+                        HomeScreen()
                     }
                 }
             }

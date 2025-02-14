@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.baseproject.android.library)
-    id("kotlin-kapt")
 }
 
 android {
@@ -23,7 +22,7 @@ dependencies {
 
     //dagger
     implementation(libs.dagger)
-    kapt(libs.dagger.compiler)
+    ksp(libs.dagger.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -23,8 +23,12 @@ dependencyResolutionManagement {
 rootProject.name = "TrackMe"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+gradle.startParameter.excludedTaskNames.add(":build-logic:convention:testClasses")
 include(":app")
 include(":common:modular-configuration")
+include(":common:network:retrofit")
+include(":common:cache:cache-api")
+include(":common:cache:cache-impl")
 include(":common:components")
 include(":feature:login")
 include(":feature:home")

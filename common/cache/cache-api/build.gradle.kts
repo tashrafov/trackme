@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.baseproject.android.library)
-    id("kotlin-kapt")
 }
 
 android {

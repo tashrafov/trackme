@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.baseproject.android.application.compose)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.hilt)
-    alias(libs.plugins.jetbrains.kotlin.kapt)
     alias(libs.plugins.maps.secrets)
 }
 
@@ -29,6 +28,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -54,7 +54,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(libs.dagger.hilt)
-    kapt(libs.dagger.hilt.compiler)
+    ksp(libs.dagger.hilt.compiler)
 }
 
 secrets {

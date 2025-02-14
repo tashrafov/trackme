@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.baseproject.android.library)
     alias(libs.plugins.baseproject.android.library.compose)
-    alias(libs.plugins.jetbrains.kotlin.kapt)
 }
 
 android {
@@ -27,10 +26,6 @@ dependencies {
 
     //Dagger Hilt
     implementation(libs.dagger.hilt)
-    kapt(libs.dagger.hilt.compiler)
+    ksp(libs.dagger.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
-}
-
-kapt {
-    correctErrorTypes = true
 }
